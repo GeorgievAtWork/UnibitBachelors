@@ -8,18 +8,20 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Expansio</title>
 </head>
 
 <body>
+    <a href="#home" class="to-top"><i class="fa fa-long-arrow-up"></i></a>
     <section id="home" class="container-fluid background">
         <nav class="navbar navbar-expand-md navbar-dark ">
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Категории</a>
+                        <a class="nav-link" href="#categories">Категории</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Учебни пътеки</a>
@@ -112,14 +114,17 @@
             <div class="col-md-4">
                 <img src="assets/images/about-1.png" alt="image1" class="oval-img right" data-aos="fade-right"
                     data-aos-duration="1000" />
+                    <span class="hidden">Искаш да научиш нещо ново?</span>
             </div>
             <div class="col-md-4">
-                <img src="assets/images/about-2.png" alt="image2" data-aos="fade-up" data-aos-duration="750"
+                <img src="assets/images/about-2.png" class="oval-img" alt="image2" data-aos="fade-up" data-aos-duration="750"
                     data-aos-delay="150" width="300" height="300" />
+                    <span class="hidden">Избери от категориите в сайта и започни да учиш с видеоуроци</span>
             </div>
             <div class="col-md-4">
                 <img src="assets/images/about-3.png" alt="image3" class="oval-img left wider" data-aos="fade-left"
                     data-aos-duration="1000" data-aos-delay="300" />
+                    <span class="hidden">Придобий нови знания и се сертифицирай</span>
             </div>
         </div>
     </section>

@@ -157,8 +157,28 @@ body {
 
 
 
+.to-top {
+    display: block;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-color: white;
+    background: linear-gradient(204deg, rgba(2, 0, 36, 1) 0%, rgba(28, 0, 248, 1) 0%, rgba(184, 43, 231, 1) 0%, rgba(0, 215, 255, 1) 84%, rgba(0, 142, 255, 1) 100%);
+    z-index: 999;
+    background-color: transparent;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 40px;
+    transition: 0.4s ease-in-out;
+    color: white;
+}
 
-
+.to-top:hover {
+    color: white;
+}
 
 
 
@@ -175,7 +195,7 @@ body {
     padding-bottom: 110px;
     min-height: 100%;
     text-align: center;
-    
+
 }
 
 .about-container .img-container {
@@ -226,15 +246,25 @@ body {
 }
 
 .category-box {
-    margin-top: 50px;
+    margin-top: 60px;
+
 }
+
 
 .category-box a {
     text-decoration: none;
     cursor: pointer;
     color: white;
     font-size: 26px;
+    display: block;
+    transition: transform .2s;
 }
+
+.category-box a:hover {
+    transform: scale(1.2);
+}
+
+
 
 .category-box .img-holder {
     width: 200px;
@@ -242,10 +272,29 @@ body {
     display: block;
     margin: auto;
     margin-bottom: 20px;
-}
 
+}
 
 
 .categories-holder {
     padding-top: 60px;
+}
+
+.hidden {
+    color: black;
+    display: block;
+    font-size: 24px;
+    height: 0;
+    opacity: 0;
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+}
+
+.oval-img {
+    cursor: pointer;
+}
+
+.oval-img:hover~.hidden {
+    display: block;
+    opacity: 1;
 }
