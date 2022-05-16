@@ -157,7 +157,7 @@ body {
 
 
 
-.to-top {
+.scrollToTopBtn {
     display: block;
     position: fixed;
     bottom: 15px;
@@ -172,21 +172,20 @@ body {
     border-radius: 15px;
     text-align: center;
     font-size: 40px;
-    transition: 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
     color: white;
 }
 
-.to-top:hover {
-    color: white;
-}
+.scrollToTopBtn.active {
+    opacity: 1;
+  }
 
+  .scrollToTopBtn:hover{
+      color: rgb(140, 240, 255);
+  }
 
-
-
-
-
-
-
+ 
 .section-container {
     max-width: 100%;
     box-sizing: border-box;
@@ -216,7 +215,7 @@ body {
 
 .about-container .about-text {
     text-align: justify;
-    padding: 0 100px;
+    
     color: black;
 }
 
@@ -234,6 +233,7 @@ body {
 .title-holder .title {
     text-align: center;
     padding: 0 100px;
+    font-size: 40px;
 }
 
 .title-holder .title.white {
@@ -242,7 +242,7 @@ body {
 
 .categories-container{
     background-color: #A9C9FF;
-    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
     
 }
 
@@ -278,27 +278,17 @@ body {
 
 
 .content-holder {
-    padding-top: 60px;
+    margin-top: 160px;
 }
 
-.hidden {
+.caption {
     color: black;
     display: block;
     font-size: 24px;
-    height: 0;
-    opacity: 0;
-    transition-delay: 0s;
-    transition-duration: 0.4s;
 }
 
-.oval-img {
-    cursor: pointer;
-}
 
-.oval-img:hover~.hidden {
-    display: block;
-    opacity: 1;
-}
+
 
 
 .tutors-container{
@@ -358,3 +348,63 @@ body {
     height: 250px;
 }
 
+.contacts-container{
+    background-image: linear-gradient(to left, #fc5c7d, #6a82fb);
+    color: white;
+    position: relative;
+}
+
+.categories-holder{
+padding-top: 60px;
+}
+
+
+
+.location-data h4{
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.location-data p{
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+.mini-row *{
+    text-align: center;
+}
+
+.location-data iframe{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    border-radius: 15px;
+}
+
+
+  
+.trademark{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+.navbar-toggler {
+    display: block;
+    width: 100%;
+}
+    
+}
