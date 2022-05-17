@@ -31,8 +31,6 @@ body {
     width: 99%;
 }
 
-
-
 .nav-link {
     color: white !important;
     font-size: 30px;
@@ -67,7 +65,6 @@ body {
     min-height: 20%;
     background-size: cover;
 }
-
 
 .pushdown {
     margin-top: 300px
@@ -163,8 +160,6 @@ body {
     color: #fff;
 }
 
-
-
 .scrollToTopBtn {
     display: block;
     position: fixed;
@@ -192,7 +187,6 @@ body {
 .scrollToTopBtn:hover {
     color: rgb(140, 240, 255);
 }
-
 
 .section-container {
     max-width: 100%;
@@ -227,7 +221,6 @@ body {
     color: black;
 }
 
-
 #small-img {
     margin-top: 150px;
     width: 180px;
@@ -259,7 +252,6 @@ body {
 
 }
 
-
 .category-box a {
     text-decoration: none;
     cursor: pointer;
@@ -273,17 +265,13 @@ body {
     transform: scale(1.2);
 }
 
-
-
 .category-box .img-holder {
     width: 200px;
     height: 200px;
     display: block;
     margin: auto;
     margin-bottom: 20px;
-
 }
-
 
 .content-holder {
     margin-top: 160px;
@@ -294,10 +282,6 @@ body {
     display: block;
     font-size: 24px;
 }
-
-
-
-
 
 .tutors-container {
     color: black;
@@ -311,7 +295,6 @@ body {
     box-shadow: 0;
     transition: box-shadow 1s;
     border-radius: 15px;
-
 }
 
 .tutor-box:hover {
@@ -368,8 +351,6 @@ body {
     padding-top: 60px;
 }
 
-
-
 .location-data h4 {
     font-size: 30px;
     margin-top: 25px;
@@ -394,8 +375,6 @@ body {
     border-radius: 15px;
 }
 
-
-
 .trademark {
     position: absolute;
     bottom: 20px;
@@ -403,9 +382,6 @@ body {
     transform: translateX(-50%);
     z-index: 99;
 }
-
-
-
 
 /* Internal pages */
 
@@ -433,7 +409,6 @@ body {
     text-align: center;
 }
 
-
 /* Video page */
 
 .video-container,
@@ -446,7 +421,6 @@ body {
     position: relative;
     height: 520px;
     margin-bottom: 100px;
-    ;
 }
 
 .video-js {
@@ -489,11 +463,9 @@ body {
     height: 75%;
 }
 
-
 .tutor-container .info-holder table td.to-right {
     font-size: 25px;
     font-weight: 600;
-    display: inline-block;
     float: right;
 }
 
@@ -502,9 +474,6 @@ body {
     text-align: justify;
     padding: 0 10px;
 }
-
-
-
 
 /* Responsive */
 @media only screen and (max-width: 768px) {
@@ -517,11 +486,5 @@ body {
     .video-holder .tutor-name {
         position: unset;
     }
-
-}
-
-
-.trouble {
-    border: 1px solid greenyellow;
 
 }
