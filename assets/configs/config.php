@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost';
+$host = 'c-mysql';
 $db = 'expansio';
 $user = 'root';
 $password = 'root';
