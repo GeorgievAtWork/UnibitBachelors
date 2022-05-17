@@ -1,4 +1,5 @@
 <?php
+header( "refresh:5;url=./index.php" );
 require 'assets/partials/head.php';
 ?>
 
@@ -8,7 +9,7 @@ require 'assets/partials/head.php';
             <h1 class="display-4">Упс, тази страница не съществува</h1>
             <p class="lead">Връщаме Ви към началната страница.</p>
             <?php
-                header( "refresh:5;url=index.php" );
+               
             ?>
         </div>
     </div>    

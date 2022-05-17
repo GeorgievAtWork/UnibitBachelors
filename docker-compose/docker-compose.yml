@@ -2,7 +2,7 @@ version: "3"
 
 services:
     c-php:
-        image: ge0rg1ev/46156r-php-nginx
+        image: ge0rg1ev/46156r-apache-php
         ports:
             - 80:80
         networks:
