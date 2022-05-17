@@ -10,8 +10,8 @@
 
 ## Реализация
 **Expansio** е мулти-контейнерно приложение, реализирано в облака, включващо множество технологии. Реализира се посредством два **Docker шаблона**, които могат да бъдат намерени както следва:<br>
-[46156r-php-apache](https://hub.docker.com/repository/docker/ge0rg1ev/46156r-php-apache) <br>
-[46156r-sql](https://hub.docker.com/repository/docker/ge0rg1ev/46156r-sql) <br>
+[46156r-php-apache](https://hub.docker.com/r/ge0rg1ev/46156r-php-apache) <br>
+[46156r-sql](https://hub.docker.com/r/ge0rg1ev/46156r-sql) <br>
 
 За "вдигането" на цялата среда е използван **Docker-compose**, който реализира двата **Docker** контейнера, като "закача" нужните папки, отваря нужните портове и подсигурява мрежовата комуникация между тях. Всичко това се случва в **Amazon Web Services EC2 Linux** инстанция, на чиито публичен IP адрес е достъпен сайта.
 
