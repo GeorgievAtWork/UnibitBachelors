@@ -8,9 +8,6 @@ require 'assets/partials/head.php';
         <div class="container pushdown left-text-cont">
             <h1 class="display-4">Упс, тази страница не съществува</h1>
             <p class="lead">Връщаме Ви към началната страница.</p>
-            <?php
-               
-            ?>
         </div>
     </div>    
 </section>
