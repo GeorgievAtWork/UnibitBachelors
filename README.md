@@ -38,6 +38,10 @@
 - **Dockerhub** - за хостване на Docker Image-ите, които реализират приложението
 - **Amazon Web Services(AWS)** и по-точно **Elastic Compute Cloud(EC2)** - за виртуализация на средата и high availability хостинг.
 
+## Предпоставки
+За успешното стартиране на **Expansio** са нужни:
+- Docker - [Link](https://docs.docker.com/get-docker/)
+- Docker-compose - [Link](https://docs.docker.com/compose/install/)
 
 ## Стартиране и инсталация
 ```bash
