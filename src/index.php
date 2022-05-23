@@ -89,42 +89,22 @@ require 'assets/configs/pdo.php';
         <div class="col-md-12">
             <h2 class="title white" data-aos="fade-down">Категории</h2>
         </div>
-        </row>
-        <div class="container">
-            <form class="row categories-holder" id="category-form" action="category.php" method="POST">
-                <div class="col-sm-4 category-box" data-aos="fade-right">
-                    <a href="#" type="submit" onclick="redirectCategory(3)">
-                        <img src="assets/images/courses-it.png" class="img-holder" />
-                        Информационни технологии</a>
-                </div>
-                <div class="col-sm-4 category-box" data-aos="fade-down">
-                    <a href="#" type="submit" onclick="redirectCategory(1)">
-                        <img src="assets/images/courses-lifestyle.png" class="img-holder" />
-                        Лайфстайл</a>
-                </div>
-                <div class="col-sm-4 category-box" data-aos="fade-left">
-                    <a href="#" type="submit" onclick="redirectCategory(4)">
-                        <img src="assets/images/courses-finances.png" class="img-holder" />
-                        Финанси</a>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-sm-4 category-box" data-aos="fade-right">
-                    <a href="#" type="submit" onclick="redirectCategory(6)">
-                        <img src="assets/images/courses-sciences.png" class="img-holder" />
-                        Наука</a>
-                </div>
-                <div class="col-sm-4 category-box" data-aos="fade-up">
-                    <a href="#" type="submit" onclick="redirectCategory(2)">
-                        <img src="assets/images/courses-photography.png" class="img-holder" />
-                        Фотография</a>
-                </div>
-                <div class="col-sm-4 category-box" data-aos="fade-left">
-                    <a href="#" type="submit" onclick="redirectCategory(5)">
-                        <img src="assets/images/courses-fitness.png" class="img-holder" />
-                        Фитнес и тренировки</a>
-                </div>
-            </form>
-        </div>
+    </div>
+    <div class="container">
+        <form id="category-form" action="category.php" method="POST">
+            <div class="row categories-holder">
+                <?php
+                $stmt = $pdo->query("SELECT * FROM subjects");
+                while ($row = $stmt->fetch()) { ?>
+                    <div class="col-sm-4 category-box" data-aos="fade-up">
+                        <a href="#" type="submit" onclick="redirectCategory(<?php echo $row['subject_id'] ?>)">
+                            <img src="<?php echo $row['image_path'] ?>" class="img-holder" />
+                            <?php echo $row['subject_name'] ?></a>
+                    </div>
+                <?php } ?>
+            </div>
+        </form>
+    </div>
 </section>
 
 <section id="tutors" class="container-fluid section-container tutors-container">
@@ -134,34 +114,22 @@ require 'assets/configs/pdo.php';
         </div>
         </row>
         <form class="container" id="tutor-form" action="tutor.php" method="POST">
-            <?php
-            $stmt = $pdo->query("SELECT * FROM tutors");
-            $i = 1;
-            while ($row = $stmt->fetch()) {
-                if ($i == 1 || $i == 4) { ?>
-                    <div class="row tutors-holder">
-                    <?php
-                    $i = 1;
-                }
-
-                if ($i != 4) {
-                    $newRow = false;
-                    ?>
-                        <div class="col-xl-4 tutor-box" data-aos="fade-up">
-                            <a href="#" type="submit" onclick="redirectTutor(<?php echo $i ?>)">
-                                <img src="<?php echo $row['avatar_path'] ?>" class="img-holder" />
-                                <span class="name-holder"><?php echo $row['first_name'] . " " . $row['last_name'] ?></span>
-                                <p><?php echo $row['description'] ?></p>
-                            </a>
-                        </div>
-                    <?php
-                    $i++;
-                }
-                if ($i == 1 || $i == 4) { ?>
+            <div class="row tutors-holder">
+                <?php
+                $stmt = $pdo->query("SELECT * FROM tutors");
+                while ($row = $stmt->fetch()) {
+                ?>
+                    <div class="col-xl-4 tutor-box" data-aos="fade-up">
+                        <a href="#" type="submit" onclick="redirectTutor(<?php echo $row['tutor_id'] ?>)">
+                            <img src="<?php echo $row['avatar_path'] ?>" class="img-holder" />
+                            <span class="name-holder"><?php echo $row['first_name'] . " " . $row['last_name'] ?></span>
+                            <p><?php echo $row['description'] ?></p>
+                        </a>
                     </div>
-            <?php
+                <?php
                 }
-            } ?>
+                ?>
+            </div>
         </form>
     </div>
 </section>

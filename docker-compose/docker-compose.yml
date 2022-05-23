@@ -10,12 +10,13 @@ services:
         depends_on:
             - c-mysql
         volumes:
-            - /home/ec2-user/prod/UnibitBachelors/src/:/var/www/html/
+            - ../src/:/var/www/html/
 
     c-mysql:
         image: ge0rg1ev/46156r-sql
         volumes:
-            - /home/ec2-user/prod/UnibitBachelors/src/assets/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+            - ../src/assets/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+            - my-datavol:/var/lib/mysql
         networks:
             - c-network
         environment:
@@ -26,3 +27,6 @@ services:
 
 networks:
     c-network:
+
+volumes:
+    my-datavol:
