@@ -25,6 +25,15 @@ services:
         ports:
             - 3306:3306
 
+    c-backup:
+        image: ge0rg1ev/46156r-backup
+        depends_on:
+            - c-mysql
+        volumes:
+            - my-datavol:/backup
+        networks:
+            - c-network
+
 networks:
     c-network:
 
